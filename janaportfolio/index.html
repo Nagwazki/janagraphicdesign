@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jana Ahmed — Creative Designer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+      <div class="loader-logo">AN</div>
+      <div
+        style="
+          font-size: 0.7rem;
+          letter-spacing: 0.4em;
+          color: var(--rose);
+          margin-top: 0.5rem;
+          text-transform: uppercase;
+        "
+      >
+        Creative Portfolio
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <div class="loader-text">Crafting your experience...</div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="progress-bar" style="width: 0%"></div>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+      <div class="sidebar-logo">Jana Ahmed</div>
+      <div class="sidebar-title">Graphic Designer</div>
+      <div class="sidebar-divider"></div>
+      <nav class="sidebar-nav">
+        <a href="#hero" class="nav-link active" data-section="hero">
+          <span class="nav-icon">✦</span> Home
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <span class="nav-icon">◎</span> About
+        </a>
+        <a href="#skills" class="nav-link" data-section="skills">
+          <span class="nav-icon">◈</span> Skills
+        </a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">
+          <span class="nav-icon">⬡</span> Portfolio
+        </a>
+        <a href="#services" class="nav-link" data-section="services">
+          <span class="nav-icon">◇</span> Services
+        </a>
+        <a href="#testimonials" class="nav-link" data-section="testimonials">
+          <span class="nav-icon">◯</span> Testimonials
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+          <span class="nav-icon">◉</span> Contact
+        </a>
+        <div class="sidebar-divider"></div>
+        <a href="javascript:void(0)" class="nav-link theme-toggle-btn">
+          <span class="nav-icon">◐</span>
+          <span class="theme-text">Light Mode</span>
+        </a>
+      </nav>
+      <div class="sidebar-socials">
+        <a href="https://www.tiktok.com/@jana.ahmed5745?_r=1&_t=ZS-96KXokN" class="social-icon" title="TikTok"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"
+            /></svg
+        ></a>
+        <a href="https://www.facebook.com/share/1MRzcaGBau/" class="social-icon" title="Facebook"
+          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            /></svg
+        ></a>
+        <a href="https://www.behance.net/ganaahmed26" class="social-icon" title="Behance">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 43.4 10.8 43.4 34.7 0 23.5-15.3 35.7-43.4 35.7H77.9v-70.4zm73.9 231.3H77.9V265h73.9c29.4 0 47.4 13.5 47.4 37.7 0 23.5-18 34.5-47.4 34.5zM562.4 238.8c-21.4-74.7-81.5-131.2-163.7-131.2-84 0-145.5 54.5-145.5 132.3 0 80.7 63 130.8 145.5 130.8 52.3 0 108.5-27.3 136.5-70.8h-63.5c-15.1 21.2-40 35-73 35-47.1 0-73-28.5-73-72.7h210.4c1.2-8.1 1.2-18.4 1.2-23.4zm-161.4-38.9c44.1 0 63.9 28.5 63.9 72.7h-129.2c0-44.2 22.5-72.7 65.3-72.7zM301.6 48h201.6v33.8H301.6V48z" />
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MOBILE NAV -->
+    <nav id="mobile-nav">
+      <a href="#hero" class="mobile-nav-item active"
+        ><span class="mn-icon">✦</span><span>Home</span></a
+      >
+      <a href="#about" class="mobile-nav-item"
+        ><span class="mn-icon">◎</span><span>About</span></a
+      >
+      <a href="#skills" class="mobile-nav-item"
+        ><span class="mn-icon">◈</span><span>Skills</span></a
+      >
+      <a href="#portfolio" class="mobile-nav-item"
+        ><span class="mn-icon">⬡</span><span>Work</span></a
+      >
+      <a href="#contact" class="mobile-nav-item"
+        ><span class="mn-icon">◉</span><span>Contact</span></a
+      >
+      <a href="javascript:void(0)" class="mobile-nav-item theme-toggle-btn">
+        <span class="mn-icon">◐</span>
+        <span class="theme-text">Mode</span>
+      </a>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-bg">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">Available for Projects</div>
+          <h1 class="hero-name">Creative<br />Graphic<br />Designer</h1>
+          <p class="hero-tagline">
+            Transforming ideas into extraordinary<br />visual experiences
+          </p>
+          <div class="typing-wrap">
+            <span class="typing-text" id="typing"></span>
+          </div>
+          <div class="hero-ctas">
+            <a href="#portfolio" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-outline">Let's Talk</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-img-ring">
+            <div class="hero-avatar">
+              <img
+                src="photo/Gemini_Generated_Image_z7b6twz7b6twz7b6.png"
+                alt="Profile Image"
+                class="avatar-img"
+              />
+            </div>
+          </div>
+          <div class="hero-badge b1">
+            <span class="badge-dot"></span>graphic design · Brand Identity
+          </div>
+          <div class="hero-badge b2">
+            <span class="badge-dot"></span>2+ Years Experience
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="about-grid">
+          <div>
+            <div class="section-label reveal">Who I Am</div>
+            <h2 class="section-title reveal reveal-delay-1">
+              Designing with<br />Intention &amp; Soul
+            </h2>
+            <p class="about-bio reveal reveal-delay-2">
+              My name is Jana, I am a graphic designer with more than two years
+              of experience in the creative field. She specializes in
+              Photoshop-based design and has worked on a variety of visual
+              projects with a strong focus on creativity and detail. Jana has
+              experience working at GuardXfly, in addition to collaborating with
+              international clients and working as a freelance designer. She is
+              passionate about creating modern and impactful designs that
+              combine aesthetics with functionality.
+            </p>
+            <div class="stats-row reveal reveal-delay-2">
+              <div class="stat-card">
+                <div class="stat-num" data-count="120">0</div>
+                <div class="stat-label">Projects Done</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="45">0</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="8">0</div>
+                <div class="stat-label">Awards Won</div>
+              </div>
+            </div>
+            <div class="timeline reveal reveal-delay-3">
+              <div class="timeline-item">
+                <div class="timeline-year">2026 — Present</div>
+                <div class="timeline-role">Senior Creative Designer</div>
+                <div class="timeline-company">GuardXfly, Amman</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2024 — 2025</div>
+                <div class="timeline-role">Brand hamama; branding</div>
+                <div class="timeline-company">Atelier Créatif</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-year">2025 — 2026</div>
+                <div class="timeline-role">Freelance Graphic Designer</div>
+                <div class="timeline-company">Online</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual reveal">
+            <div class="about-img-card">
+              <img
+                src="photo/Gemini_Generated_Image_bhj4iwbhj4iwbhj4.png"
+                alt="About Aria"
+                class="about-img"
+              />
+            </div>
+            <div class="skill-chips">
+              <span class="chip">Creative Direction</span>
+              <span class="chip">Branding</span>
+              <span class="chip">3D Design</span>
+              <span class="chip">Photography</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-label reveal">Expertise</div>
+        <h2 class="section-title reveal reveal-delay-1">Tools &amp; Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="90">
+            <div class="skill-icon-wrap">🎨</div>
+            <div class="skill-name">Adobe Photoshop</div>
+            <div class="skill-cat">Photo Editing · Compositing</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--w: 0.9"></div>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-1" data-skill="88">
+            <div class="skill-icon-wrap">✏️</div>
+            <div class="skill-name">Adobe Illustrator</div>
+            <div class="skill-cat">Vector · Illustration</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--w: 0.88"></div>
+            </div>
+          </div>
+          <div class="skill-card reveal" data-skill="94">
+            <div class="skill-icon-wrap">💎</div>
+            <div class="skill-name">Branding</div>
+            <div class="skill-cat">Identity · Strategy</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--w: 0.94"></div>
+            </div>
+          </div>
+          <div class="skill-card reveal reveal-delay-1" data-skill="87">
+            <div class="skill-icon-wrap">📲</div>
+            <div class="skill-name">Social Media Design</div>
+            <div class="skill-cat">Content · Campaigns</div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="--w: 0.87"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <div class="section-label reveal">Selected Work</div>
+        <h2 class="section-title reveal reveal-delay-1">Portfolio</h2>
+        <div class="filter-row reveal reveal-delay-2">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="poster">Posters</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+          <button class="filter-btn" data-filter="3d">3D Design</button>
+        </div>
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- MODAL -->
+      <div id="modal">
+        <div class="modal-card">
+          <button class="modal-close" id="modal-close">✕</button>
+          <div class="modal-thumb" id="modal-thumb"></div>
+          <div class="modal-cat" id="modal-cat"></div>
+          <div class="modal-title" id="modal-title"></div>
+          <div class="modal-desc" id="modal-desc"></div>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="section-label reveal">What I Offer</div>
+        <h2 class="section-title reveal reveal-delay-1">Services</h2>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">💎</div>
+            <div class="service-name">Brand Identity</div>
+            <div class="service-desc">
+              Complete brand systems — logos, guidelines, typography, and visual
+              language that make your brand unforgettable.
+            </div>
+            <span class="service-tag">→ From $1,500</span>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">✨</div>
+            <div class="service-name">Social Media Design</div>
+            <div class="service-desc">
+              Scroll-stopping content, templates, and campaigns designed to
+              engage your audience and grow your presence.
+            </div>
+            <span class="service-tag">→ From $500 / month</span>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">🎯</div>
+            <div class="service-name">Creative Direction</div>
+            <div class="service-desc">
+              Strategic creative oversight for campaigns, shoots, and brand
+              launches — guiding vision from concept to execution.
+            </div>
+            <span class="service-tag">→ Custom pricing</span>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon">📦</div>
+            <div class="service-name">Packaging Design</div>
+            <div class="service-desc">
+              Premium product packaging that stands out on shelves and
+              communicates your brand's quality and personality.
+            </div>
+            <span class="service-tag">→ From $1,200</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" style="padding-bottom: 6rem">
+        <div class="section-label reveal">Kind Words</div>
+        <h2 class="section-title reveal reveal-delay-1">Client Stories</h2>
+        <div style="overflow: hidden; margin-top: 3rem">
+          <div class="testimonials-track" id="testi-track"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Let's Create<br />Something Beautiful
+        </h2>
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="contact-info">
+              <h3>Ready to start<br />your project?</h3>
+              <p>
+                Whether you need a brand identity, or a full creative
+                campaign — I'd love to hear about your vision.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a href="#" class="contact-link">
+                <div class="contact-link-icon">✉</div>
+                gannamahmoud974@gmail.com
+              </a>
+              <a href="#" class="contact-link">
+                <div class="contact-link-icon">📍</div>
+                Alexandria, Egypt · Remote
+              </a>
+              <a href="#" class="contact-link">
+                <div class="contact-link-icon">◎</div>
+                Available for new projects
+              </a>
+            </div>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Name"
+                id="f-name"
+              />
+              <label class="form-label" for="f-name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Email"
+                id="f-email"
+              />
+              <label class="form-label" for="f-email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Subject"
+                id="f-subject"
+              />
+              <label class="form-label" for="f-subject">Project Type</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-textarea"
+                placeholder="Message"
+                id="f-message"
+              ></textarea>
+              <label class="form-label" for="f-message"
+                >Tell me about your project</label
+              >
+            </div>
+            <button class="submit-btn" onclick="handleSubmit()">
+              Send Message ✦
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">Jana Ahmed</div>
+          <p class="footer-text">
+            Creating modern and impactful designs that combine aesthetics with
+            functionality.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Brand Identity</a></li>
+            <li><a href="#services">Social Media</a></li>
+            <li><a href="#services">3D Design</a></li>
+            <li><a href="#services">Packaging</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social Media</h4>
+          <div class="footer-socials">
+            <a href="https://www.tiktok.com/@jana.ahmed5745?_r=1&_t=ZS-96KXokNJE7G" class="social-icon" title="TikTok"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"
+                /></svg
+            ></a>
+            <a href="https://www.facebook.com/share/1MRzcaGBau/" class="social-icon" title="Facebook"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                /></svg
+            ></a>
+            <a href="https://www.behance.net/ganaahmed26" class="social-icon" title="Behance"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 43.4 10.8 43.4 34.7 0 23.5-15.3 35.7-43.4 35.7H77.9v-70.4zm73.9 231.3H77.9V265h73.9c29.4 0 47.4 13.5 47.4 37.7 0 23.5-18 34.5-47.4 34.5zM562.4 238.8c-21.4-74.7-81.5-131.2-163.7-131.2-84 0-145.5 54.5-145.5 132.3 0 80.7 63 130.8 145.5 130.8 52.3 0 108.5-27.3 136.5-70.8h-63.5c-15.1 21.2-40 35-73 35-47.1 0-73-28.5-73-72.7h210.4c1.2-8.1 1.2-18.4 1.2-23.4zm-161.4-38.9c44.1 0 63.9 28.5 63.9 72.7h-129.2c0-44.2 22.5-72.7 65.3-72.7zM301.6 48h201.6v33.8H301.6V48z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Jana Ahmed. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
