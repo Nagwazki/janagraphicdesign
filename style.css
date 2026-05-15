@@ -269,7 +269,7 @@ nav.sidebar-nav {
   justify-content: center;
   color: var(--text-primary); /* اللون الأساسي للأيقونة */
   text-decoration: none;
-  /* font-size: 1.1rem; لم يعد مطلوبًا لأيقونات SVG */
+  /* font-size: 1.1rem; /* لم يعد مطلوبًا لأيقونات SVG */ */
   transition: all 0.3s var(--transition);
 }
 .social-icon svg {
@@ -1425,29 +1425,6 @@ footer {
   justify-content: center;
 }
 
-.developer-credit {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.glow-link {
-  color: var(--rose);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px var(--rose), 0 0 10px var(--rose);
-  }
-  to {
-    text-shadow: 0 0 10px var(--rose), 0 0 20px var(--rose-light), 0 0 30px var(--rose);
-  }
-}
-
 /* REVEAL ANIMATIONS */
 .reveal {
   opacity: 0;
@@ -1538,7 +1515,6 @@ footer {
   .stats-row {
     grid-template-columns: 1fr 1fr;
   }
-}
 @media (max-width: 480px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
