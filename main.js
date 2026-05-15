@@ -74,15 +74,15 @@ setTimeout(type,2500);
 
 // PORTFOLIO DATA
 const projects=[
-  {cat:'branding',title:'Acadmy lomi',desc:'Complete brand identity for a luxury French cosmetics brand — logomark, packaging, and brand guidelines.',img:'photo/WhatsApp Image 2026-05-14 at 3.37.16 PM.jpeg'},
-  {cat:'ui',title:'car design',desc:'Mobile UI/UX design for a wellness and meditation app with fluid micro-interactions.',img:'photo/WhatsApp Image 2026-05-14 at 3.37.16 PM (1).jpeg'},
-  {cat:'poster',title:'Dental clinic',desc:'Event poster series for a contemporary art festival — bold typography meets ethereal photography.',img:'photo/WhatsApp Image 2026-05-14 at 3.37.17 PM (1).jpeg'},
-  {cat:'social',title:'Hajj and Umrah Company',desc:'Social media campaign for a boutique fashion brand — 60+ assets across Instagram, TikTok, Pinterest.',img:'photo/WhatsApp Image 2026-05-14 at 3.37.17 PM.jpeg'},
-  {cat:'3d',title:'Dental clinic 3d',desc:'3D typographic explorations rendered in Blender — exploring form, light, and materiality.',img:'photo/WhatsApp Image 2026-05-14 at 3.38.25 PM.jpeg'},
-  {cat:'motion',title:'design for Eid Al-Adha',desc:'Animated brand logo and intro sequence for a luxury lifestyle YouTube channel.',img:'photo/WhatsApp Image 2026-05-14 at 3.40.03 PM.jpeg'},
-  {cat:'branding',title:'Dental clinic',desc:'Minimal luxury brand identity for a Parisian interior design studio.',img:'photo/WhatsApp Image 2026-05-14 at 3.38.02 PM.jpeg'},
-  {cat:'ui',title:'Dental clinic',desc:'Editorial analytics dashboard — clean, data-rich UI designed for a digital media company.',img:'photo/WhatsApp Image 2026-05-14 at 3.38.15 PM.jpeg'},
-  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/WhatsApp Image 2026-05-14 at 3.43.47 PM.jpeg'},
+  {cat:'branding',title:'Acadmy lomi',desc:'Complete brand identity for a luxury French cosmetics brand — logomark, packaging, and brand guidelines.',img:'photo/heros.jpeg'},
+  {cat:'ui',title:'car design',desc:'Mobile UI/UX design for a wellness and meditation app with fluid micro-interactions.',img:'photo/car.jpeg'},
+  {cat:'poster',title:'Dental clinic',desc:'Event poster series for a contemporary art festival — bold typography meets ethereal photography.',img:'photo/clinic3.jpeg'},
+  {cat:'social',title:'Hajj and Umrah Company',desc:'Social media campaign for a boutique fashion brand — 60+ assets across Instagram, TikTok, Pinterest.',img:'photo/hajj.jpeg'},
+  {cat:'3d',title:'Dental clinic 3d',desc:'3D typographic explorations rendered in Blender — exploring form, light, and materiality.',img:'photo/clinic2.jpeg'},
+  {cat:'motion',title:'design for Eid Al-Adha',desc:'Animated brand logo and intro sequence for a luxury lifestyle YouTube channel.',img:'photo/cheep2.jpeg'},
+  {cat:'branding',title:'Dental clinic',desc:'Minimal luxury brand identity for a Parisian interior design studio.',img:'photo/clinic1.jpeg'},
+  {cat:'ui',title:'Dental clinic',desc:'Editorial analytics dashboard — clean, data-rich UI designed for a digital media company.',img:'photo/clinic4.jpeg'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/soo.jpeg'},
 ];
 const colors=['rgba(211,126,145,0.08)','rgba(180,100,120,0.1)','rgba(150,80,100,0.07)'];
 const grid=document.getElementById('portfolio-grid');
