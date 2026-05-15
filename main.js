@@ -74,15 +74,15 @@ setTimeout(type,2500);
 
 // PORTFOLIO DATA
 const projects=[
-  {cat:'branding',title:'Acadmy lomi',desc:'Complete brand identity for a luxury French cosmetics brand — logomark, packaging, and brand guidelines.',img:'photo/heros.jpeg'},
-  {cat:'ui',title:'car design',desc:'Mobile UI/UX design for a wellness and meditation app with fluid micro-interactions.',img:'photo/car.jpeg'},
-  {cat:'poster',title:'Dental clinic',desc:'Event poster series for a contemporary art festival — bold typography meets ethereal photography.',img:'photo/clinic3.jpeg'},
-  {cat:'social',title:'Hajj and Umrah Company',desc:'Social media campaign for a boutique fashion brand — 60+ assets across Instagram, TikTok, Pinterest.',img:'photo/hajj.jpeg'},
-  {cat:'3d',title:'Dental clinic 3d',desc:'3D typographic explorations rendered in Blender — exploring form, light, and materiality.',img:'photo/clinic2.jpeg'},
-  {cat:'motion',title:'design for Eid Al-Adha',desc:'Animated brand logo and intro sequence for a luxury lifestyle YouTube channel.',img:'photo/cheep2.jpeg'},
-  {cat:'branding',title:'Dental clinic',desc:'Minimal luxury brand identity for a Parisian interior design studio.',img:'photo/clinic1.jpeg'},
-  {cat:'ui',title:'Dental clinic',desc:'Editorial analytics dashboard — clean, data-rich UI designed for a digital media company.',img:'photo/clinic4.jpeg'},
-  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/soo.jpeg'},
+  {cat:'branding',title:'Acadmy lomi',desc:'Complete brand identity for a luxury French cosmetics brand — logomark, packaging, and brand guidelines.',img:'heros.jpeg'},
+  {cat:'ui',title:'car design',desc:'Mobile UI/UX design for a wellness and meditation app with fluid micro-interactions.',img:'car.jpeg'},
+  {cat:'poster',title:'Dental clinic',desc:'Event poster series for a contemporary art festival — bold typography meets ethereal photography.',img:'clinic3.jpeg'},
+  {cat:'social',title:'Hajj and Umrah Company',desc:'Social media campaign for a boutique fashion brand — 60+ assets across Instagram, TikTok, Pinterest.',img:'hajj.jpeg'},
+  {cat:'3d',title:'Dental clinic 3d',desc:'3D typographic explorations rendered in Blender — exploring form, light, and materiality.',img:'clinic2.jpeg'},
+  {cat:'motion',title:'design for Eid Al-Adha',desc:'Animated brand logo and intro sequence for a luxury lifestyle YouTube channel.',img:'cheep2.jpeg'},
+  {cat:'branding',title:'Dental clinic',desc:'Minimal luxury brand identity for a Parisian interior design studio.',img:'clinic1.jpeg'},
+  {cat:'ui',title:'Dental clinic',desc:'Editorial analytics dashboard — clean, data-rich UI designed for a digital media company.',img:'clinic4.jpeg'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'soo.jpeg'},
 ];
 const colors=['rgba(211,126,145,0.08)','rgba(180,100,120,0.1)','rgba(150,80,100,0.07)'];
 const grid=document.getElementById('portfolio-grid');
@@ -136,12 +136,12 @@ document.getElementById('modal').addEventListener('click',e=>{
 
 // TESTIMONIALS
 const testimonials=[
-  {text:'Aria transformed our brand completely. The new identity feels luxurious, modern, and deeply authentic to who we are.',stars:'★★★★★',name:'Sophie Laurent',role:'Founder, Lumière Beauty',init:'SL'},
-  {text:'Working with Aria was an absolute dream. Her attention to detail, creative vision, and communication made everything seamless.',stars:'★★★★★',name:'Marc Dupont',role:'Creative Director, Atelier Noir',init:'MD'},
-  {text:'Our social media engagement doubled after Aria designed our campaign assets. Absolutely stunning work, every single time.',stars:'★★★★★',name:'Isabelle Chen',role:'Marketing Director, La Maison',init:'IC'},
+  {text:'Aria transformed our brand completely. The new identity feels luxurious, modern, and deeply authentic to who we are.',stars:'★★★★★',name:'Sophie Laurent',role:'Founder, Lumièr',init:'SL'},
+  {text:'Working with Aria was an absolute dream. Her attention to detail, creative vision, and communication made everything seamless.',stars:'★★★★★',name:'Marc Dupont',role:'Creative ',init:'MD'},
+  {text:'Our social media engagement doubled after Aria designed our campaign assets. Absolutely stunning work, every single time.',stars:'★★★★★',name:'Isabelle Chen',role:'Marketing Di',init:'IC'},
   {text:'The UI she designed for our app got featured in several design publications. Users love it and so do we.',stars:'★★★★★',name:'James Okafor',role:'CEO, Élan Technologies',init:'JO'},
   {text:'Aria has a rare gift — she understands both the business objectives and the aesthetic vision simultaneously.',stars:'★★★★★',name:'Claire Beaumont',role:'Brand Strategist',init:'CB'},
-  {text:'The packaging design she created for our product line elevated our entire brand perception overnight.',stars:'★★★★★',name:'Yuki Tanaka',role:'Product Lead, Bloom Co.',init:'YT'},
+  {text:'The packaging design she created for our product line elevated our entire brand perception overnight.',stars:'★★★★★',name:'Yuki Tanaka',role:'Product Lead, Bloom Co.',init:'YT'}
 ];
 const track=document.getElementById('testi-track');
 [...testimonials,...testimonials].forEach(t=>{
