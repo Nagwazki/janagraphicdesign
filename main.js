@@ -32,6 +32,15 @@ window.addEventListener('scroll',()=>{
 // ACTIVE NAV
 function updateNav(){
   const sections=document.querySelectorAll('section[id]');
+  const isBottom = (window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 60);
+
+  if(isBottom) {
+    document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+    document.querySelectorAll('.mobile-nav-item').forEach(l=>l.classList.remove('active'));
+    document.querySelectorAll(`[data-section="contact"],.mobile-nav-item[href="#contact"]`).forEach(l=>l.classList.add('active'));
+    return;
+  }
+
   sections.forEach(s=>{
     const top=s.getBoundingClientRect().top;
     if(top<=200&&top>-s.offsetHeight+200){
@@ -82,7 +91,16 @@ const projects=[
   {cat:'motion',title:'design for Eid Al-Adha',desc:'Animated brand logo and intro sequence for a luxury lifestyle YouTube channel.',img:'photo/cheep2.jpeg'},
   {cat:'branding',title:'Dental clinic',desc:'Minimal luxury brand identity for a Parisian interior design studio.',img:'photo/clinic1.jpeg'},
   {cat:'ui',title:'Dental clinic',desc:'Editorial analytics dashboard — clean, data-rich UI designed for a digital media company.',img:'photo/clinic4.jpeg'},
-  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/soo.jpeg'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/hamama.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/ji.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/kl.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/quen.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/quen2.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/png.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/wer.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/x.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/x2.png'},
+  {cat:'poster',title:'Car repair Company',desc:'Limited edition art prints exploring celestial themes through abstract illustration.',img:'photo/x3.png'},
 ];
 const colors=['rgba(211,126,145,0.08)','rgba(180,100,120,0.1)','rgba(150,80,100,0.07)'];
 const grid=document.getElementById('portfolio-grid');
@@ -100,6 +118,8 @@ function renderPortfolio(filter){
         <div class="p-title">${p.title}</div>
         <div class="p-desc">${p.desc.slice(0,60)}...</div>
       </div>`;
+    card.addEventListener('mouseenter',()=>{ cursor.style.width='20px'; cursor.style.height='20px'; follower.style.width='50px'; follower.style.height='50px'; });
+    card.addEventListener('mouseleave',()=>{ cursor.style.width='12px'; cursor.style.height='12px'; follower.style.width='36px'; follower.style.height='36px'; });
     card.addEventListener('click',()=>openModal(p));
     grid.appendChild(card);
     setTimeout(()=>card.classList.add('visible'),50+i*80);
@@ -134,13 +154,20 @@ document.getElementById('modal').addEventListener('click',e=>{
   }
 });
 
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+
 // TESTIMONIALS
 const testimonials=[
-  {text:'Aria transformed our brand completely. The new identity feels luxurious, modern, and deeply authentic to who we are.',stars:'★★★★★',name:'Sophie Laurent',role:'Founder, Lumière Beauty',init:'SL'},
-  {text:'Working with Aria was an absolute dream. Her attention to detail, creative vision, and communication made everything seamless.',stars:'★★★★★',name:'Marc Dupont',role:'Creative Director, Atelier Noir',init:'MD'},
-  {text:'Our social media engagement doubled after Aria designed our campaign assets. Absolutely stunning work, every single time.',stars:'★★★★★',name:'Isabelle Chen',role:'Marketing Director, La Maison',init:'IC'},
+  {text:'Jana transformed our brand completely. The new identity feels luxurious, modern, and deeply authentic to who we are.',stars:'★★★★★',name:'Sophie Laurent',role:'Founder, Lumière Beauty',init:'SL'},
+  {text:'Working with Jana was an absolute dream. Her attention to detail, creative vision, and communication made everything seamless.',stars:'★★★★★',name:'Marc Dupont',role:'Creative Director, Atelier Noir',init:'MD'},
+  {text:'Our social media engagement doubled after Jana designed our campaign assets. Absolutely stunning work, every single time.',stars:'★★★★★',name:'Isabelle Chen',role:'Marketing Director, La Maison',init:'IC'},
   {text:'The UI she designed for our app got featured in several design publications. Users love it and so do we.',stars:'★★★★★',name:'James Okafor',role:'CEO, Élan Technologies',init:'JO'},
-  {text:'Aria has a rare gift — she understands both the business objectives and the aesthetic vision simultaneously.',stars:'★★★★★',name:'Claire Beaumont',role:'Brand Strategist',init:'CB'},
+  {text:'Jana has a rare gift — she understands both the business objectives and the aesthetic vision simultaneously.',stars:'★★★★★',name:'Claire Beaumont',role:'Brand Strategist',init:'CB'},
   {text:'The packaging design she created for our product line elevated our entire brand perception overnight.',stars:'★★★★★',name:'Yuki Tanaka',role:'Product Lead, Bloom Co.',init:'YT'},
 ];
 const track=document.getElementById('testi-track');
@@ -216,14 +243,14 @@ function handleSubmit() {
   const phoneNumber = "201016335453"; // استبدل هذا برقمك الخاص
 
   // Formatting the message
-  const whatsappMessage = `*رسالة جديدة من الموقع الشخصي*%0A%0A` +
-    `*الاسم:* ${name}%0A` +
-    `*البريد الإلكتروني:* ${email}%0A` +
-    `*نوع المشروع:* ${subject}%0A%0A` +
-    `*الرسالة:*%0A${message}`;
+  const whatsappMessage = `*رسالة جديدة من الموقع الشخصي*\n\n` +
+    `*الاسم:* ${name}\n` +
+    `*البريد الإلكتروني:* ${email}\n` +
+    `*نوع المشروع:* ${subject}\n\n` +
+    `*الرسالة:*\n${message}`;
 
   // WhatsApp Link
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Visual Feedback
   btn.textContent = 'جاري التحويل... ✦';
@@ -244,9 +271,17 @@ function handleSubmit() {
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
-    e.preventDefault();
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target) target.scrollIntoView({behavior:'smooth'});
+    const href = a.getAttribute('href');
+    if (!href || href === '#' || href === '#!') return;
+    try {
+      const target=document.querySelector(href);
+      if(target) {
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth'});
+      }
+    } catch(err) {
+      // Ignore invalid selector
+    }
   });
 });
 
